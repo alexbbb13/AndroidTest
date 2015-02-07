@@ -1,0 +1,59 @@
+Sample Task Instructions:
+
+So you can give me an idea of how you would fit in with our efforts to develop Android apps
+I have created a small task. This task will give me an idea of your ability to:
+	a) git and push code to BitBucket which you will need to do to work with us.
+	b) work with controls. The sample control is being used in a non-standard way so it may take
+	   a brief bit of research for you to wire it up.
+	c) your ability to integrate layouts with SQLite.
+	
+I have placed a sample .apk and two .png screen shots in the assets directory. They are not part
+of the app but I am hopping your having these will make help you better understand the explanation.
+If you choose to install the .apk you will be able to see what the solution should look like.
+
+The initial page of this app has been designed and is where the user signs in. It consists of an
+image button and a spinner which need to work as follows:
+	a) If the ImageButton (right side) is clicked/touched the spinner list should expand. The user
+	   can then select from the list. The list will then close and that selection will become the
+	   new value for the spinner.
+	b) If the user clicks/touches the spinner (left side) they will go on to one of two pages. If
+	   "Add New User" is selected the user should be taken to the AddUser activity (just take them
+	    to the stub page). If a username is selected the database needs to be updated (see below)
+	    and the user should be taken to the ActivitySelect activity. The selected username needs
+	    to be passed to ActivitySelect.
+
+There is a temp string array to get you started but the values for the spinner need to come from the
+SQLite databasse in the assets folder.
+	a) Startup database
+	a) Load Sqinner using an alphabetized list of users from db.Users (prepend "Add New User" to
+	   the list)
+	b) The first item shown in Spinner should be the the last user who logged in which is stored in
+	   db.Program_Settings.last_user
+
+Before you transfer the user to the ActivitySelect activity you need to update the
+db.Program_Settings.last_user so the program will have that information next time it runs.
+
+From working with other programmers in the past I can provide you with a few notes:
+	a) I choose to use tabs for indents. This is not negotiable and if this gets changed in the
+	   code while you are editing it causes me frustration. To avoid this I will ask you to
+	   change the settings in Android Studio for both Java and XML pages to use tabs for indents,
+	   turn on smarttabs and set tab width to 4 spaces.
+	b) Unless you are working on a new page which has not yet been uploaded to the repository do
+	   not use any of the automatic Android Studio code reformatting.
+	c) I rely on the diffs from BitBucket to quickly see what changes you are making to the code.
+	   For this to be efficient to me you need to avoid changing code where it does not affect the
+	   function of the program. Basically, unless you need to change something leave it alone.
+	d) My variable naming is a combination of my own preference and things I have been talked into
+	   from previous programmers. It is unlikely to change unless you can give me a good reason
+	   why it would make a difference. I would encourage you to use the same naming strategy as
+	   already exists in the code. If you do not please understand if I change the names over time.
+	
+Your task then, is to:
+	1) Clone the repo
+	2) Implement the functionality
+	3) Push the changes. PLEASE PUSH YOUR CHANGES TO A BRANCH with your name. Do not push to the
+	   main branch of the code.
+	
+Please ask questions if you have them.
+Thanks,
+Howard
